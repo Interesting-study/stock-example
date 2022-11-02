@@ -24,4 +24,9 @@ public class StockService {
         stock.decrease(quantity);
         stockRepository.saveAndFlush(stock);
     }
+
+    /*
+    * synchronized 하나의 프로세스에서만 보장됨
+    * 서버가 하나일 땐 괜찮지만, 두개 이상의 서버일 땐 사용하지 않을 때와 같게 됨
+    * */
 }
