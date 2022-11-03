@@ -18,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class StockServiceTest {
 
     @Autowired
-    private StockService stockService;
+    private PessimisticLockStockService stockService;
 
     @Autowired
     private StockRepository stockRepository;
@@ -32,6 +32,7 @@ class StockServiceTest {
     @AfterEach
     public void after(){
         stockRepository.deleteAll();
+
     }
 
     @Test
